@@ -35,4 +35,16 @@ func main() {
 	sort.Ints(luckynumbers)
 	fmt.Println(luckynumbers)
 
+	// Remove some particular elements from slices based on indexes and
+
+	learnings := make([]string,4)
+	learnings[0] = "ReactJS"
+	learnings[1]="Express&Node"
+	learnings[2]="FLASK"
+	learnings[3]="GITOPS"
+	
+    var	index int= 2
+	learnings = append(learnings[:index],learnings[index+1:]...)
+	fmt.Println(learnings)
+
 }
