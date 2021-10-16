@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/get", (req, res) => {
-  res.send("Hello from the home side");
+  res.json({ message: "Hello going to build mini app in Golang " });
 });
 
 app.post("/post", (req, res) => {
