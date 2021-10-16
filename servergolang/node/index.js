@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (req, res) => {
   res.send("Hello from the home side");
 });
@@ -20,6 +23,16 @@ app.get("/", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send("Hello from the home side");
+});
+
+app.post("/post", (req, res) => {
+  let mydata = req.body;
+  res.status(200).send(mydata);
+});
+
+// using post by passing data through form
+app.post("/postformdata", (req, res) => {
+  res.status(200).send(JSON.stringify(req.body));
 });
 
 app.listen(PORT, () => {
