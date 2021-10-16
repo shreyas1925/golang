@@ -13,6 +13,7 @@ func main() {
 func performGetReuest() {
 
 	const url = "http://localhost:5000/get"
+	// const url = "http://localhost:5000/"
 
 	res, err := http.Get(url)
 
@@ -28,4 +29,8 @@ func performGetReuest() {
 	content, _ := ioutil.ReadAll(res.Body)
 
 	fmt.Println("Content are : ", string(content))
+
 }
+
+// What we can do in postman I have handled those requests using golang
+// by giving url of particular route
