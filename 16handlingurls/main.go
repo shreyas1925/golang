@@ -30,6 +30,7 @@ func main() {
 	fmt.Println("Params are as follows")
 
 	for _, data := range queryparams {
+
 		fmt.Println(data)
 	}
 
